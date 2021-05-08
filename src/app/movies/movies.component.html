@@ -1,0 +1,54 @@
+<!-- <p>movies works!</p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container col-md-6">
+            <div class="input-group">
+                    <input type="search" [(ngModel)]="mname" (keyup)="getmovies()"  class="form-control rounded" placeholder="Search" aria-label="Search"
+                          aria-describedby="search-addon"   />
+                    <button type="button" (click)="getmovies()" class="btn btn-outline-info">search</button>
+                  </div>
+            </div>
+
+        <div class="container">
+              <table class="table  table-hover table-info">
+                    <thead class="thead-dark">
+                          <tr>
+                                <th>Title</th>
+                                <th>Director</th>
+                                <th>Poster</th>
+                                <th>Year</th>
+                                <th>Released</th>
+                                <th>Actors</th>
+                                <th>Genre</th>
+                                <th>Runtime</th>
+                              </tr>
+                        </thead>
+                    <tbody>
+                          <tr>
+                                <td><a class="text-white" [href]="'https: //www.google.com/search?q='+movies.Title">{{movies.Title}}</a></td>
+            <td>{{movies.Director}}</td>
+            <td><img [src]="movies.Poster" alt="" width="150px" height="150px"></td>
+            <td>{{movies.Year}}</td>
+            <td>{{movies.Released}}</td>
+            <td>{{movies.Actors}}</td>
+            <td>{{movies.Genre}}</td>
+            <td>{{movies.Runtime}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   
+  </body>
+
+</html>
